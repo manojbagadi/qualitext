@@ -26,27 +26,6 @@ An automated text quality assessment and document health auditing system built w
    - **Page 3 (Model Comparison)**: Empirical accuracy charts, feature importance metrics, and architecture hierarchy tables.
 
 ---
-
-## 🚀 Quick Start
-
-### 1. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 2. Run the Web Application
-```bash
-python -m streamlit run app.py
-```
-Open your browser and navigate to: **`http://localhost:8501`**
-
-### 3. (Optional) Retrain All Models
-```bash
-python train_all_models.py
-```
-
----
-
 ## 📊 Dataset & Model Performance
 
 - **Dataset**: 476 balanced samples (High Quality vs. Spam/Junk/Noise).
@@ -60,25 +39,3 @@ python train_all_models.py
 
 ---
 
-## 📂 Project Structure
-
-```
-text_quality_classifier/
-│
-├── app.py                      # Main Streamlit web application
-├── train_all_models.py         # Unified training pipeline for all 3 models
-├── requirements.txt            # Python dependencies (Streamlit, scikit-learn, pypdf, docx)
-├── README.md                   # Project documentation
-├── PROJECT_PRESENTATION.md     # Detailed academic presentation guide for reviewers
-│
-├── data/
-│   ├── dataset.csv             # Balanced corpus (476 samples)
-│   └── features.npz            # Extracted feature matrix (359 dimensions)
-│
-└── models/
-    ├── neural_mlp.pkl          # Trained Multi-Layer Perceptron (Top Model: 100%)
-    ├── baseline_rf.pkl         # Trained Random Forest classifier (97.9%)
-    ├── decision_tree.pkl       # Trained Decision Tree baseline (97.9%)
-    ├── feature_scaler.pkl      # StandardScaler fitted on 9 structural features
-    └── tfidf_vectorizer.pkl    # TfidfVectorizer fitted on 350 n-grams
-```
